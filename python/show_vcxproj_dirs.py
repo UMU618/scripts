@@ -6,6 +6,9 @@ import xml.etree.ElementTree as ET
 OUT_DIR = '$(SolutionDir)bin\\$(PlatformTarget)\\$(Configuration)\\'
 INT_DIR = '$(SolutionDir)tmp\\$(PlatformTarget)\\$(Configuration)\\$(ProjectName)\\'
 
+RED = "\033[31m"
+RESET = "\033[0m"
+
 def show_vcxproj_dirs(filename, outdir, intdir):
     URL = 'http://schemas.microsoft.com/developer/msbuild/2003'
     NS = '{' + URL + '}'
@@ -62,7 +65,7 @@ def show_vcxproj_dirs(filename, outdir, intdir):
         # 查找或添加 OutDir 属性
         outdir_elem = pc.find(NS + 'OutDir')
         if outdir_elem is None:
-            print(f"  {value} OutDir is default.")
+            print(f"{RED}  {value} OutDir is default.{RESET}")
         elif outdir_elem.text != outdir:
             print(f"  {value} OutDir: " + outdir_elem.text)
         #else:
@@ -71,7 +74,7 @@ def show_vcxproj_dirs(filename, outdir, intdir):
         # 查找或添加 IntDir 属性
         intdir_elem = pc.find(NS + 'IntDir')
         if intdir_elem is None:
-            print(f"  {value} IntDir is default.")
+            print(f"{RED}  {value} IntDir is default.{RESET}")
         elif intdir_elem.text != intdir:
             print(f"  {value} IntDir: " + intdir_elem.text)
         #else:
@@ -79,16 +82,16 @@ def show_vcxproj_dirs(filename, outdir, intdir):
 
     left = set(plat_confs) - existed
     if (len(left)):
-        print("  Not all configurations are set:", left)
+        print(f"{RED}  Not all configurations are set: {left}{RESET}")
 
 def add_vcxproj_file(vcxproj_files, filename):
     # 检查参数是否以 .vcxproj 结尾
     if filename.endswith('.vcxproj'):
-        vcxproj_files.add(filename)
+        vcxproj_files.append(filename)
 
 def main():
     if len(sys.argv) < 2:
-        print("Please input at lease a .vcxproj file!")
+        print("Please input at least a .vcxproj file!")
         sys.exit(1)
 
     vcxproj_files = []
