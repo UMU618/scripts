@@ -31,5 +31,7 @@ $eq = ArrayEquals $ips $old
 "Unchanged?: " + $eq
 if (-not $eq) {
     Set-NetFirewallAddressFilter -InputObject $af -RemoteAddress $ips
-    Out-File .\ip-blacklist.txt -Encoding utf8 -InputObject $ips
+    # Out-File .\ip-blacklist.txt -Encoding utf8 -InputObject $ips
+    $unixContent = $ips -join "`n"
+    Out-File .\ban-ips -Encoding utf8 -NoNewline -InputObject $unixContent
 }
