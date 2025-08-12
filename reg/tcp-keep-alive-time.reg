@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Set KeepAliveTime to 120000ms(2min), default = 7200000ms(2h)
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"KeepAliveTime"=dword:0001d4c0
+

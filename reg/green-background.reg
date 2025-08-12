@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Colors]
+"ActiveBorder"="199 237 204"
+"ButtonFace"="199 237 204"
+"ButtonLight"="199 237 204"
+"HilightText"="199 237 204"
+"InactiveBorder"="199 237 204"
+"InfoWindow"="199 237 204"
+"Menu"="199 237 204"
+"Window"="199 237 204"
+
+[HKEY_USERS\.DEFAULT\Control Panel\Colors]
+"ButtonHilight"="199 237 204"
+"HilightText"="199 237 204"
+"InfoWindow"="199 237 204"
+"Window"="199 237 204"
+

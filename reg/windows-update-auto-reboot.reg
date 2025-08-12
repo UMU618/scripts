@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"SetComplianceDeadlineForQU"=dword:00000001
+"ConfigureDeadlineForQualityUpdates"=dword:00000000
+"ConfigureDeadlineGracePeriod"=dword:00000007
+"ConfigureDeadlineNoAutoRebootForQualityUpdates"=dword:00000001
+"SetComplianceDeadlineForFU"=dword:00000001
+"ConfigureDeadlineForFeatureUpdates"=dword:00000000
+"ConfigureDeadlineGracePeriodForFeatureUpdates"=dword:00000007
+"ConfigureDeadlineNoAutoRebootForFeatureUpdates"=dword:00000001
+

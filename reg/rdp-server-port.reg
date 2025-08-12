@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Set RDP server port to 9833
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp]
+"PortNumber"=dword:00002669
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp]
+"PortNumber"=dword:00002669
+

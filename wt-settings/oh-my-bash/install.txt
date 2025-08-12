@@ -1,0 +1,7 @@
+OSH_REPOSITORY="https://gitee.com/umu618/oh-my-bash" bash -c "$(wget https://gitee.com/umu618/oh-my-bash/raw/master/tools/install.sh -O -)"
+
+mkdir ~/.oh-my-bash/themes/UMU
+vim ~/.oh-my-bash/themes/UMU/UMU.theme.sh
+
+sed -i.bak 's/OSH_THEME=\".*\"/OSH_THEME=\"UMU\"/g' ~/.bashrc
+source ~/.bashrc
