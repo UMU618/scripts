@@ -1,0 +1,13 @@
+Windows 11 24H2 默认的安全设置使得无法访问匿名 Samba Server
+
+开启不安全的访问的方法如下：
+
+1. 启用不安全的来宾登录：
+Set-SmbClientConfiguration -EnableInsecureGuestLogons $true
+
+2. 禁用“Microsoft 网络客户端: 对通信进行数字签名(始终)”
+Set-SmbClientConfiguration -RequireSecuritySignature $false
+
+查询：
+Get-SmbClientConfiguration | FL EnableInsecureGuestLogons
+Get-SmbClientConfiguration | FL RequireSecuritySignature
