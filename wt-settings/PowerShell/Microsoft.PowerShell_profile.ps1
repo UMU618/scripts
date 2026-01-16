@@ -8,5 +8,8 @@ function gph { & git push $args }
 function grv { & git remote -v }
 function gs { & git status }
 
+function wi { & winget install $args }
+function ws { & winget search $args }
+
 $env:GO111MODULE = "on"
 $env:GOPROXY = "https://goproxy.cn"
