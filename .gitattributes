@@ -1,11 +1,3 @@
-*.itermcolors       text eol=lf
-*.fish              text eol=lf
-*.json              text eol=lf
-*.md                text eol=lf
-*.ps1               text eol=lf
-*.py                text eol=lf
+* text=auto eol=lf
+
 *.reg               text working-tree-encoding=UTF-16LE-BOM eol=crlf
-*.sh                text eol=lf
-*.txt               text eol=lf
-*.zsh-theme         text eol=lf
-LICENSE             text eol=lf
